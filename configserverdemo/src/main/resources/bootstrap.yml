@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: composite
+  cloud:
+    config:
+      profile: default
+      label: sample-config
+      application-name: configserverdemo
+      server:
+        composite:
+        - type: aws
+          region: us-east-1
+          bucket: srikanth-sg-demo-config-server
+        bootstrap: true
